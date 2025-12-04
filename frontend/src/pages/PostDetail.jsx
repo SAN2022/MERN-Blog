@@ -6,12 +6,12 @@ export default function PostDetail() {
   const [post, setPost] = useState(null);
   const { id } = useParams();
 
-  const apiUrl = "https://mern-blog-backend-gray.vercel.app/"
+  const apiUrl = "https://mern-blog-backend-gray.vercel.app"
 
   const fetchPost = async () => {
     try {
-      // const response = await axios.get(`http://localhost:8000/api/posts/${id}`);
-      const response = await axios.get(`${apiUrl}/api/posts/${id}`);
+      const response = await axios.get(`http://localhost:8000/api/posts/${id}`);
+      // const response = await axios.get(`${apiUrl}/api/posts/${id}`);
       setPost(response.data);
     } catch (error) {
       console.error("Error fetching post:", error);
