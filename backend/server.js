@@ -20,8 +20,8 @@ app.use(express.json())
 // Connect to MongoDB
 // mongoose.connect('mongodb://localhost:27017/blog')
 mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true
 })
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.log('DB error',err));
