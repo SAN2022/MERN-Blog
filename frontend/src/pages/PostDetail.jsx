@@ -30,6 +30,7 @@ export default function PostDetail() {
     year: "numeric",
   }).format(new Date(post.createdAt));
 
+
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
       <article>
